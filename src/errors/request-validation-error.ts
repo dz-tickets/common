@@ -1,5 +1,5 @@
-import {ValidationError} from 'express-validator';
-import {CustomError, ErrorResponse} from "./custom-error";
+import { ValidationError } from 'express-validator';
+import { CustomError, ErrorResponse } from "./custom-error";
 
 export class RequestValidationError extends CustomError {
     statusCode: number = 400;
@@ -17,7 +17,7 @@ export class RequestValidationError extends CustomError {
                     field: error.path
                 };
             }
-            return {message: error.msg || 'Invalid parameter'};
+            return { message: error.msg || 'Invalid parameter' };
         });
     }
 }

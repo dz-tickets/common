@@ -1,4 +1,4 @@
-import {CustomError, ErrorResponse} from "./custom-error";
+import { CustomError, ErrorResponse } from "./custom-error";
 
 export class DatabaseConnectionError extends CustomError {
     reason: string = "Error connecting to database";
@@ -10,6 +10,6 @@ export class DatabaseConnectionError extends CustomError {
     }
 
     serializeErrors(): ErrorResponse[] {
-        return [{message: this.reason}];
+        return [{ message: this.reason }];
     }
 }
