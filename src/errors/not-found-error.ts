@@ -8,7 +8,7 @@ export class NotFoundError extends CustomError {
         Object.setPrototypeOf(this, NotFoundError.prototype);
     }
 
-    serializedErrors(): ErrorResponse[] {
+    serializeErrors(): ErrorResponse[] {
         return [{message: "Not found"}];
     }
 }

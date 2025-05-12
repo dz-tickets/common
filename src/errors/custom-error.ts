@@ -10,5 +10,5 @@ export abstract class CustomError extends Error {
         Object.setPrototypeOf(this, CustomError.prototype);
     }
 
-    abstract serializedErrors(): ErrorResponse[];
+    abstract serializeErrors(): ErrorResponse[];
 }
